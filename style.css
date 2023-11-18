@@ -1,0 +1,90 @@
+
+
+body {
+    background-color: black;
+    min-height: 100vh;
+    max-width: 90%;
+    margin: 0;
+    line-height: 1.3;
+    margin: 0 10% 0 10%;
+}
+
+@font-face {
+    font-family: 'logo-font';
+    src: url('/data/Norse-Bold.otf');
+}
+
+body{
+    display: flex;
+}
+
+.main-left {
+    background-image: url(/data/image-bg.jpg);
+    background-size: cover;
+    background-position: center;
+
+    width: 40vw;
+}
+
+.left-logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20vh;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.left-logo img {
+    height: 120px;
+}
+
+.main-left h1 {
+    font: 1rem logo-font;
+    color: white;
+    font-size: 70px;
+}
+
+.main-right {
+    width: 60vw;
+    background-color: rgb(245, 245, 245);;
+}
+
+.header {
+    background-color: rgb(245, 245, 245);
+    height: 30%;
+}
+
+.user-form {
+    background-color: rgb(255, 255, 255);
+    height: 35%;
+    display: flex;
+    gap: 60px;
+}
+
+.user-data.left,
+.user-data.right {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin-left: 60px;
+}
+
+
+.form-row {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.form-row input[type='text'],
+.form-row input[type='number'],
+.form-row input[type='password'],
+.form-row input[type='email'] {
+    width: 250px;
+    height: 30px;
+    border-radius: 3px;
+}
+
+.bottom {
+    
+}
