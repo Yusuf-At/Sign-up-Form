@@ -15,12 +15,12 @@ body {
 
 @font-face {
     font-family: 'logo-font';
-    src: url('/data/Norse-Bold.otf');
+    src: url('data/Norse-Bold.otf');
 }
 
 @font-face {
     font-family: 'lato-regular';
-    src: url('/data/Lato/Lato-Regular.ttf');
+    src: url('data/Lato/Lato-Regular.ttf');
 }
 
 body{
@@ -28,7 +28,7 @@ body{
 }
 
 .main-left {
-    background-image: url(/data/image-bg.jpg);
+    background-image: url(data/image-bg.jpg);
     background-size: cover;
     background-position: center;
 
