@@ -1,4 +1,8 @@
-
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
 body {
     background-color: black;
@@ -12,6 +16,11 @@ body {
 @font-face {
     font-family: 'logo-font';
     src: url('/data/Norse-Bold.otf');
+}
+
+@font-face {
+    font-family: 'lato-regular';
+    src: url('/data/Lato/Lato-Regular.ttf');
 }
 
 body{
@@ -39,52 +48,117 @@ body{
 }
 
 .main-left h1 {
-    font: 1rem logo-font;
+    font-family: logo-font;
     color: white;
     font-size: 70px;
 }
 
-.main-right {
-    width: 60vw;
-    background-color: rgb(245, 245, 245);;
-}
-
-.header {
+.main-right .header {
     background-color: rgb(245, 245, 245);
     height: 30%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    font-size: 16px;
+    justify-content: end;
+    margin-bottom: 60px;
+    margin-left: 60px;
 }
+
+.main-right {
+    width: 60vw;
+    background-color: rgb(245, 245, 245);
+    font-family: lato-regular;
+}
+
+.main-right h1 {
+    font-size: 25px;
+}
+
 
 .user-form {
     background-color: rgb(255, 255, 255);
     height: 35%;
-    display: flex;
-    gap: 60px;
 }
 
-.user-data.left,
-.user-data.right {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    margin-left: 60px;
+.user-form h1 {
+    margin-left: 50px;
+    padding: 20px 0px;
 }
 
+.user-data-form {
+    max-width: 700px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 15px;
+    margin-left: 50px;
+}
 
 .form-row {
+    min-height: 70px;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
 }
 
-.form-row input[type='text'],
-.form-row input[type='number'],
-.form-row input[type='password'],
-.form-row input[type='email'] {
+input[type='text'],
+input[type='number'],
+input[type='password'],
+input[type='email'] {
     width: 250px;
     height: 30px;
     border-radius: 3px;
+    border: 1px solid #333;
+
+    padding: 14px;
 }
 
-.bottom {
-    
+.bottom button,
+.bottom p {
+    margin-left: 50px;
+    margin-top: 50px;
+}
+
+.bottom button {
+    font: inherit;
+    font-size: 1.2rem;
+    font-weight: 600;
+
+
+    background-color: #596D48;
+    color: white;
+
+    border: none;
+    border-radius: 8px;
+
+    padding: 15px 60px;
+    cursor: pointer;
+}
+
+.bottom p {
+    font-size: 1.1rem;
+}
+
+a {
+    text-decoration: none;
+    color: #596D48;
+    font-weight: 600;
+}
+
+input:focus {
+    outline: none;
+    border: 1px solid blue;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+
+}
+
+input:invalid,
+.error.active {
+    border: 2px solid red;
+}
+
+span.error{
+    font-size: 0.7rem;
+    color: red;
 }

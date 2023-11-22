@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/style.css">
+    <script src="script.js" defer></script>
     <title>Sign up</title>
 </head>
 <body>
@@ -19,37 +20,43 @@
             <h1>You know you want to.</h1>
         </div>
         <div class="user-form">
-            <form action="" class="user-data left">
+            <h1>Let's do this!</h1>
+            <form action="" class="user-data-form" novalidate>
                 <div class="form-row">
                     <label for="first-name">First Name</label>
                     <input type="text" name="first-name" id="first-name">
+                    <span></span>
                 </div>
                 <div class="form-row">
                     <label for="last-name">Last Name</label>
                     <input type="text" name="last-name" id="last-name">
+                    <span></span>
                 </div>
                 <div class="form-row">
                     <label for="email">Email</label>
                     <input type="email" name="email" id="email">
+                    <span class="error mail"></span>
                 </div>
-            </form>
-            <form action="" class="user-data right"> 
                 <div class="form-row">
                     <label for="phone-number">Phone Number</label>
-                    <input type="number" name="phone-number" id="phone-number">
+                    <input type="text" inputmode="numeric" name="phone-number" id="phone-number" placeholder="+62 ">
+                    <span class="error phoneNumber" aria-invalid=""></span>
                 </div>
                 <div class="form-row">
                     <label for="password">Password</label>
-                    <input type="password" name="password" id="password">
+                    <input type="password" name="password" id="password" value="123">
+                    <span class="error password"></span>
                 </div>
                 <div class="form-row">
                     <label for="c-password">Confirm Password</label>
-                    <input type="text" name="c-password" id="c-password">
+                    <input type="password" name="c-password" id="c-password" placeholder="123">
+                    <span class="error c-password" aria-live="assertive"></span>
                 </div>
             </form>
         </div>
         <div class="bottom">
-            <button>Submit</button>
+            <button>Create Account</button>
+            <p>Already have an Account? <a href=""> Log in</a> </p>
         </div>
     </div>
 </body>
